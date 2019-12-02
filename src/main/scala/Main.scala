@@ -1,7 +1,7 @@
 object Main {
 
   def main(args: Array[String]): Unit = {
-    println(input.map(fuel).sum)
+    println(input.foldLeft(0)((acc, mass) => acc + fuel(mass)))
   }
 
   private def fuel(mass: Int) = mass / 3 - 2
